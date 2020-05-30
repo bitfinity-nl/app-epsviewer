@@ -26,7 +26,7 @@
 #
 pkg_repository_type    : 'private'
 pkg_repository_public  : ''
-pkg_repository_private : 'http://{{ def_ans_rep }}/resources/packages/jetglobal/Jet.Setup.ExcelAddIn.msi.zip'
+pkg_repository_private : 'http://{{ def_ans_rep }}/resources/packages/epsviewer/epsviewersetup.zip'
 
 
 # -- Applications settings --
@@ -41,14 +41,14 @@ pkg_repository_private : 'http://{{ def_ans_rep }}/resources/packages/jetglobal/
 #   pkg_arguments    : '/qn'                                                 # Additional Arguments for a silent installation.
 #
 pkg_state        : 'present'
-pkg_name         : 'Jet.Setup.ExcelAddIn-32bit'
+pkg_name         : 'epsviewer'
 pkg_arch         : '32bit'
 pkg_repo_local   : 'c:\ProgramData\ansible\cached\{{ pkg_name }}'
-pkg_product_id   : '{545677FB-A1C7-40D7-8438-BB18845A0DBF}'
-pkg_installer    : '{{ pkg_repo_local }}\Jet.Setup.ExcelAddIn_x86.msi'
-pkg_arguments    : '/qn'
-pkg_uninstaller  : 'MsiExec.exe /I{545677FB-A1C7-40D7-8438-BB18845A0DBF}'
-pkg_unarguments  : '/qn'
+pkg_product_id   : '{32E05824-A0AC-4DFE-B965-5F52C28FBE9F}_is1'
+pkg_installer    : '{{ pkg_repo_local }}\epsviewersetup.exe'
+pkg_arguments    : '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES'
+pkg_uninstaller  : 'C:\Program Files (x86)\EPSViewer\unins000.exe'
+pkg_unarguments  : '/SILENT'
 
 
 # -- Application specific settings:
