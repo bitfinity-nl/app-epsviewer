@@ -62,5 +62,5 @@ pkg_unarguments  : '/SILENT'
 #
 #   Chang
 pkg_icon_name                     : 'EPS Viewer.lnk'
-pkg_remove_public_desktop_icon    : 'false'
-pkg_remove_public_start_menu_icon : 'false'
+pkg_remove_public_desktop_icon    : 'true'
+pkg_remove_public_start_menu_icon : 'true'
